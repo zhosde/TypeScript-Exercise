@@ -19,22 +19,34 @@ const parseBMIArguments = (args: Array<string>): BmiValues => {
 
 const bmiCalculator = (a: number, b: number) => {
   let result = +(b / Math.pow(a / 100, 2)).toFixed(1);
+  let message
   switch (true) {
     case result < 18.5:
-      console.log("Unterweight (unhealthy)")
+      message = "Unterweight (unhealthy)"
+      console.log(message)
+      return message
       break;
     case result >= 18.5 && result <= 22.9:
-      console.log("Normal (healthy weight)")
+      message = "Normal (healthy weight)"
+      console.log(message)
+      return message
       break;
     case result >= 23 && result <= 24.9:
-      console.log("At risk (overweight)")
+      message = "At risk (overweight)"
+      console.log(message)
+      return message
       break;
     case result >= 25 && result <= 29.9:
-      console.log("Moderately obese (overweight)")
+      message = "Moderately obese (overweight)"
+      console.log(message)
+      return message
       break;
     case result >= 30:
-      console.log("Severely obese (overweight)")
+      message = "Severely obese (overweight)"
+      console.log(message)
+      return message
       break;
+    default: return 0
   }
 };
 
@@ -44,3 +56,5 @@ try {
 } catch (e) {
   console.log("Error, something bad happened, message: ", e.message);
 }
+
+export default bmiCalculator;

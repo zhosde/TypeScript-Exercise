@@ -1,6 +1,17 @@
 {
     "compilerOptions": {
-      // mandatory to have types for all variables used
-      "noImplicitAny": true,
+    // mandatory to have types for all variables used
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "strictBindCallApply": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    // ban unused parameters 
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "declaration": true,
     }
   }
