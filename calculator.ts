@@ -23,3 +23,5 @@ try {
 }
 // process.argv=['node', 'yourscript.js', ...], node myprogram.js firstarg secondarg
 console.log(process.argv)
+
+export default calculator
