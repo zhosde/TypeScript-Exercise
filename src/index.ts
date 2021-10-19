@@ -1,8 +1,13 @@
 import express from "express";
-import bmiCalculator from "./bmiCalculator";
-import calculator from "./calculator";
+import diaryRouter from './routes/diaries';
+import bmiCalculator from "../bmiCalculator";
+import calculator from "../calculator";
 
 const app = express();
+// to parse the incoming data, to have json middleware configured
+app.use(express.json())
+
+app.use('/api/diaries', diaryRouter)
 
 app.get("/ping", (_req, res) => {
   res.send("pong");

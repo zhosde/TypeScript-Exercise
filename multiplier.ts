@@ -25,6 +25,6 @@ interface MultiplyValues {
   try {
     const { value1, value2 } = parseArguments(process.argv);
     multiplicator(value1, value2, `Multiplied ${value1} and ${value2}, the result is:`);
-  } catch (e) {
-    console.log('Error, something bad happened, message: ', e.message);
+  } catch (err) {
+    console.log('Error, something bad happened, message: ', err);
   }

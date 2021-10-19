@@ -1,4 +1,27 @@
 {
+  "compilerOptions": {
+    // which version to compile
+    "target": "ES6",
+    // where to place
+    "outDir": "./build/",
+    // can use old require syntax instead of the import one, which is not supported in Node old version
+    "module": "commonjs",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    // in switch case, each case ends with return or break
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    // json module could become a valid node module and the node module extension order is ["js", "json", "node", "ts", "tsx"]
+    // so in this case and in flat directory, node module extension file shall have a unique filename
+    "resolveJsonModule": true,
+  }
+}
+
+// previous exercise set-up
+/*
+{
     "compilerOptions": {
     // mandatory to have types for all variables used
     "noImplicitAny": true,
@@ -15,3 +38,4 @@
     "declaration": true,
     }
   }
+*/

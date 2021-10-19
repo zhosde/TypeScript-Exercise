@@ -53,8 +53,8 @@ const bmiCalculator = (a: number, b: number) => {
 try {
   const { value1, value2 } = parseBMIArguments(process.argv);
   bmiCalculator(value1, value2);
-} catch (e) {
-  console.log("Error, something bad happened, message: ", e.message);
+} catch (err) {
+  console.log("Error, something bad happened, message: ", err);
 }
 
 export default bmiCalculator;
